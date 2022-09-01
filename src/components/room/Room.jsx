@@ -52,7 +52,7 @@ export function Room () {
           <Text mr={1}>
           Usuario:
           </Text>
-          <Text color="orange.400">
+          <Text fontWeight={'bold'} color="purple.400">
             {username}
           </Text>
         </Flex>
@@ -60,7 +60,7 @@ export function Room () {
         <Box id='chat poppins' w={'100%'} color="white">
           {messages.map((msg) => (
             <Flex key={msg.msg} id='poppins' fontSize={'lg'}>
-              <Text fontWeight={'bold'} mr={1} color="gray.500">{ msg.user }: </Text>
+              <Text fontWeight={''} mr={1} color="green.400">{ msg.user }: </Text>
               <Text>{ msg.msg }</Text>
             </Flex>
           ))}
