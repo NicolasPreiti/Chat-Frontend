@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import io from 'socket.io-client';
 
-const socket = io('https://chat-backend-production.up.railway.app');
+const socket = io('https://chat-backend-production.up.railway.app/');
 
 export function Room () {
   const [message, setMessage] = useState('');
