@@ -1,0 +1,26 @@
+body::-webkit-scrollbar {
+  width: 14px;               
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(160, 160, 160);       
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(86, 86, 86);    
+  border-radius: 0px;  
+}
+
+
+#chat::-webkit-scrollbar {
+  width: 14px;               
+}
+
+#chat::-webkit-scrollbar-track {
+  background: rgb(160, 160, 160);        
+}
+
+#chat::-webkit-scrollbar-thumb {
+  background-color: rgb(86, 86, 86);    
+  border-radius: 0px;  
+}
