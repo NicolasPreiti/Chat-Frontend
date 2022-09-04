@@ -65,15 +65,21 @@ export function Room () {
 
         <Box id='chat' w={'100%'} h={'100%'} color='black' overflowY={'auto'} scrollBehavior="smooth">
           {messages.map((msg) => (
-            <Flex id='poppins chat' w={'100%'} fontSize={'lg'}>
+            <Flex key={msg.msg} id='poppins chat' w={'100%'} fontSize={'lg'}>
               <Text
                 fontWeight={'semibold'}
+                w={'max-content'}
                 mr={2}
                 color={msg.user === username ? 'purple.400' : 'green.400'}
               >
                 {msg.user}:{' '}
               </Text>
-              <Text>{msg.msg}</Text>
+              <Text
+                wordBreak={'break-word'}
+                w={'100%'}
+              >
+                {msg.msg}
+              </Text>
             </Flex>
           ))}
         </Box>
