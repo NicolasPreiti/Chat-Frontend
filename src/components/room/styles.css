@@ -13,7 +13,7 @@ body::-webkit-scrollbar-thumb {
 
 
 #chat::-webkit-scrollbar {
-  width: 14px;               
+  width: 8px;               
 }
 
 #chat::-webkit-scrollbar-track {
