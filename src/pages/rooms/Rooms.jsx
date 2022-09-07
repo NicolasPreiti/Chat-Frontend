@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, Heading, Text } from '@chakra-ui/react';
 import './rooms.css';
 
 function RoomItem({ name, to }) {
@@ -10,8 +10,9 @@ function RoomItem({ name, to }) {
         pos={'relative'}
         justify={'center'}
         align={'center'}
-        w={'260px'}
+        w={'100%'}
         h={'200px'}
+        border={'1px solid black'}
         color={'white'}
         overflow={'hidden'}
       >
@@ -21,14 +22,22 @@ function RoomItem({ name, to }) {
           w={'100%'}
           h={'100%'}
           bgImage={
-            "url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/GChat.png/250px-GChat.png')"
+            "url('https://i.blogs.es/7dde2b/mensajes-de-google/1366_2000.jpg')"
           }
           bgSize={'cover'}
           bgPos={'center'}
           bgColor={'white'}
+          transform={'scale(1.5)'}
           transition={'.2s all'}
+          filter={'blur(0px)'}
         ></Box>
-        <Text pos={'relative'} fontFamily={'poppins'} fontSize={'xl'}>
+        <Text
+          pos={'relative'}
+          fontFamily={'poppins'}
+          fontSize={'xl'}
+          fontWeight={'semibold'}
+          color={'black'}
+        >
           {name}
         </Text>
       </Flex>
@@ -38,13 +47,27 @@ function RoomItem({ name, to }) {
 
 export function Rooms() {
   return (
-    <Box w={'100%'} h={'93vh'} bgColor={'gray.400'}>
-      <Flex justify={'center'} align={'center'} h={'100%'} gap={6}>
+    <Box w={'100%'} h={'100vh'} p={4} bgColor={'white'}>
+      <Heading
+        fontFamily={'poppins'}
+        fontSize={'4xl'}
+        textAlign={'center'}
+        mb={6}
+      >
+        Salas
+      </Heading>
+      <Grid
+        gridTemplateColumns={{
+          base: 'repeat(auto-fit, minmax(200px, 1fr))'
+        }}
+        gap={4}
+        w={'100%'}
+      >
         <RoomItem name="Sala 1" to="1" />
         <RoomItem name="Sala 2" to="2" />
         <RoomItem name="Sala 3" to="3" />
         <RoomItem name="Sala 4" to="4" />
-      </Flex>
+      </Grid>
     </Box>
   );
 }

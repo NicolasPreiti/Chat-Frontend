@@ -1,8 +1,9 @@
-import { Box, Flex, Input } from '@chakra-ui/react';
+import { Box, Flex, Input, IconButton } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import io from 'socket.io-client';
 import { Message } from '../message/Message';
+import { IoMdSend } from 'react-icons/io';
 import './styles.css';
 
 export function Room() {
@@ -60,6 +61,8 @@ export function Room() {
         msg
       }
     ]);
+
+    socket.off('chat message', handleAddMsg);
   };
 
   socket.on('chat message', handleAddMsg);
@@ -100,7 +103,7 @@ export function Room() {
         </Flex>
 
         <Box fontFamily={'poppins'} w={'100%'} mt={2}>
-          <form action="">
+          <form action="" onSubmit={handleSend}>
             <Flex
               w={'100%'}
               bottom="0"
@@ -110,21 +113,31 @@ export function Room() {
             >
               <Input
                 type={'text'}
+                focusBorderColor="gray"
                 autoFocus
                 value={message}
                 onChange={handleMessage}
                 w="100%"
                 borderRadius={100}
-                color
                 bgColor={'primary'}
+                boxShadow={'md'}
               />
-              <Input
-                type="submit"
-                width={'100px'}
+              <IconButton
+                icon={<IoMdSend />}
+                textAlign={'center'}
                 onClick={handleSend}
+                borderRadius={'full'}
+                bgColor={'primary'}
+                boxShadow={'md'}
+              ></IconButton>
+              {/* <Input
+                type="submit"
+                value={'enviar'}
+                width={'100px'}
+                h={'100%'}
                 borderRadius={100}
                 bgColor={'primary'}
-              />
+              /> */}
             </Flex>
           </form>
         </Box>

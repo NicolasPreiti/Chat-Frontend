@@ -59,7 +59,7 @@ export function Home() {
         <Heading
           as={'h1'}
           fontFamily={'poppins'}
-          fontSize={'5xl'}
+          fontSize={{ base: '3xl', md: '5xl' }}
           textAlign="center"
           mb={'20'}
           color={'white'}
@@ -70,14 +70,23 @@ export function Home() {
         <Box fontFamily={'poppins'} color={'white'}>
           <form onSubmit={handleUsername}>
             <FormControl isInvalid={isError}>
-              <FormLabel fontSize={'lg'} textAlign={'center'}>
+              <FormLabel
+                fontSize={{ base: 'md', md: 'lg' }}
+                textAlign={'center'}
+              >
                 Ingrese un nombre de usuario
               </FormLabel>
-              <Input id="username" type="text" onChange={handleSelectName} />
+              <Input
+                id="username"
+                type="text"
+                onChange={handleSelectName}
+                fontSize={{ base: 'md', md: 'lg' }}
+              />
               <Input
                 type={'submit'}
                 variant="filled"
                 value={'A chatear!'}
+                fontSize={{ base: 'md', md: 'lg' }}
                 w={'100%'}
                 mt={'4'}
                 color="black"
