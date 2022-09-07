@@ -73,9 +73,24 @@ export function Room() {
   // };
 
   return (
-    <Box w={'100%'} h={'93vh'} p={{ base: 0, md: 6 }} color="black">
+    <Box
+      w={'100%'}
+      h={'100vh'}
+      px={{ base: 0, md: 6 }}
+      pt={20}
+      pb={6}
+      bgImage={
+        "url('https://www.mundogatos.com/Uploads/mundogatos.com/ImagenesGrandes/los-mejores-chats-y-apps-para-amantes-de-los-gatos.jpg')"
+      }
+      bgSize="cover"
+      bgRepeat={'no-repeat'}
+      bgBlendMode={'primary'}
+      bgPos={'center'}
+      bgAttachment="fixed"
+      bgColor={'white'}
+      color="black"
+    >
       <Flex
-        id="poppins"
         direction={'column'}
         w={{ base: '100%', lg: '50%' }}
         h={'100%'}

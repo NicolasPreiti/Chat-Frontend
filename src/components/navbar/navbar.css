@@ -1,3 +1,17 @@
 .active {
-  border-bottom: 1px solid #FFF;
+  font-weight: bold;
+  transition: .3s color;
+}
+
+.active:hover {
+  color: #B264FC;
+}
+
+.notActive {
+  color: gainsboro;
+  transition: .3s color;
+}
+
+.notActive:hover {
+  color: #B264FC;
 }

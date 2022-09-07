@@ -34,7 +34,7 @@ export function Home() {
   const isError = input === '';
 
   return (
-    <Box bg={'gray.800'} w="100%" minH={'93vh'} pt={14}>
+    <Box bg={'gray.800'} w="100%" minH={'100vh'} pt={32}>
       <Box
         pos={'absolute'}
         top="0"
@@ -73,6 +73,7 @@ export function Home() {
               <FormLabel
                 fontSize={{ base: 'md', md: 'lg' }}
                 textAlign={'center'}
+                w={'100%'}
               >
                 Ingrese un nombre de usuario
               </FormLabel>
@@ -84,19 +85,13 @@ export function Home() {
               />
               <Input
                 type={'submit'}
-                variant="filled"
                 value={'A chatear!'}
                 fontSize={{ base: 'md', md: 'lg' }}
-                w={'100%'}
-                mt={'4'}
+                mt={'5'}
                 color="black"
+                bg={'white'}
                 cursor={'pointer'}
-                _hover={{
-                  bg: 'primary',
-                  boxShadow:
-                    '0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white',
-                  color: 'white'
-                }}
+                _hover={{ bgColor: 'primary', color: 'white' }}
               ></Input>
               {!isError ? (
                 <></>

@@ -47,12 +47,27 @@ function RoomItem({ name, to }) {
 
 export function Rooms() {
   return (
-    <Box w={'100%'} h={'100vh'} p={4} bgColor={'white'}>
+    <Box
+      w={'100%'}
+      h={'100vh'}
+      p={4}
+      pt={32}
+      bgImage={
+        "url('https://www.mundogatos.com/Uploads/mundogatos.com/ImagenesGrandes/los-mejores-chats-y-apps-para-amantes-de-los-gatos.jpg')"
+      }
+      bgSize="cover"
+      bgRepeat={'no-repeat'}
+      bgBlendMode={'primary'}
+      bgPos={'center'}
+      bgAttachment="fixed"
+      bgColor={'white'}
+    >
       <Heading
         fontFamily={'poppins'}
         fontSize={'4xl'}
         textAlign={'center'}
         mb={6}
+        color={'white'}
       >
         Salas
       </Heading>
